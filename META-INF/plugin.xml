@@ -5,10 +5,14 @@
     <vendor email="bashorov@gmail.com">bashor</vendor>
 
     <description><![CDATA[
+        <p>Main Menu visibility toggler for IDEs based on the IntelliJ platform.</p>
         ]]></description>
-
+    \
     <change-notes><![CDATA[
-      <p>Main Menu visibility toggler for IDEs based on the IntelliJ platform.</p>
+      <p>0.1:</p>
+      <ul>
+        <li>Added the "Toggle Main Menu" action.</li>
+      </ul>
       ]]>
     </change-notes>
 
