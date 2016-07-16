@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>com.bashorov.mainMenuToggler</id>
     <name>Main Menu toggler</name>
-    <version>0.1</version>
+    <version>0.1.1</version>
     <vendor email="bashorov@gmail.com">bashor</vendor>
 
     <description><![CDATA[
@@ -9,6 +9,10 @@
         ]]></description>
     \
     <change-notes><![CDATA[
+      <p>0.1.1:</p>
+      <ul>
+        <li>Make the plugin compatible with all IDEs based on the IntelliJ platform. </li>
+      </ul>
       <p>0.1:</p>
       <ul>
         <li>Added the "Toggle Main Menu" action.</li>
@@ -17,7 +21,7 @@
     </change-notes>
 
     <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
-    <idea-version since-build="107.105"/>
+    <idea-version since-build="143.0"/>
 
     <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
          on how to target different products -->
@@ -44,4 +48,6 @@
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>
+
+    <depends>com.intellij.modules.platform</depends>
 </idea-plugin>
