@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>com.bashorov.mainMenuToggler</id>
     <name>Main Menu toggler</name>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
     <vendor email="bashorov@gmail.com">bashor</vendor>
 
     <description><![CDATA[
@@ -9,6 +9,10 @@
         ]]></description>
     \
     <change-notes><![CDATA[
+      <p>0.2.0:</p>
+      <ul>
+        <li>Added persisted state after loading a project. </li>
+      </ul>
       <p>0.1.1:</p>
       <ul>
         <li>Make the plugin compatible with all IDEs based on the IntelliJ platform. </li>
@@ -30,11 +34,14 @@
     -->
 
     <application-components>
-        <!-- Add your application components here -->
+        <component>
+            <implementation-class>com.bashorov.mainMenuToggler.OpenProjectComponent</implementation-class>
+        </component>
     </application-components>
 
     <project-components>
         <!-- Add your project components here -->
+
     </project-components>
 
     <actions>
