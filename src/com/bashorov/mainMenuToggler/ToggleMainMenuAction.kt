@@ -4,8 +4,6 @@ import com.intellij.ide.util.PropertiesComponent
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.PlatformDataKeys
 import com.intellij.openapi.actionSystem.ToggleAction
-import com.intellij.openapi.wm.ex.WindowManagerEx
-import com.intellij.openapi.wm.impl.IdeFrameImpl
 import javax.swing.JMenuBar
 
 class ToggleMainMenuAction : ToggleAction() {
@@ -39,16 +37,13 @@ class ToggleMainMenuAction : ToggleAction() {
         }
     }
 
-    private fun getFrame(e: AnActionEvent): IdeFrameImpl? {
-        val project = PlatformDataKeys.PROJECT.getData(e.dataContext) ?: return null
-        return WindowManagerEx.getInstanceEx()?.getFrame(project)
-    }
     private fun getMenuBar(e: AnActionEvent): JMenuBar? {
-        val frame = getFrame(e) ?: return null
-        return frame.jMenuBar
+        val project = PlatformDataKeys.PROJECT.getData(e.dataContext) ?: return null
+        return project.getMenuBar()
     }
 
     companion object {
         private val MENU_TEXT = "Main Menu"
     }
 }
+
