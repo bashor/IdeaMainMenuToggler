@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>com.bashorov.mainMenuToggler</id>
     <name>Main Menu toggler</name>
-    <version>0.2.0</version>
+    <version>0.2.1</version>
     <vendor email="bashorov@gmail.com">bashor</vendor>
 
     <description><![CDATA[
@@ -9,6 +9,10 @@
         ]]></description>
     \
     <change-notes><![CDATA[
+      <p>0.2.1:</p>
+      <ul>
+        <li>Fixed restoring of persisted state on recent versions of the IntelliJ platform.</li>
+      </ul>
       <p>0.2.0:</p>
       <ul>
         <li>Added persisted state after loading a project. </li>

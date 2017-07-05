@@ -1,6 +1,7 @@
 package com.bashorov.mainMenuToggler
 
 import com.intellij.ide.util.PropertiesComponent
+import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.ApplicationComponent
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManager
@@ -25,7 +26,9 @@ class OpenProjectComponent : ApplicationComponent, ProjectManagerListener {
     override fun projectOpened(project: Project?) {
         val state: Boolean = PropertiesComponent.getInstance().getBoolean("is_menu_visible")
 
-        project?.getMenuBar()?.isVisible = state
+        ApplicationManager.getApplication().invokeLater {
+            project?.getMenuBar()?.isVisible = state
+        }
     }
 
     override fun projectClosed(project: Project?) {
