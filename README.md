@@ -2,7 +2,7 @@
 
 ## How to install
 
-1. [From JetBarins' Plugin Repository](https://www.jetbrains.com/help/idea/installing-updating-and-uninstalling-repository-plugins.html)
+1. [From JetBrains Plugins Repository](https://www.jetbrains.com/help/idea/installing-updating-and-uninstalling-repository-plugins.html)
 2. Download plugin manually from https://plugins.jetbrains.com/plugin/7297-main-menu-toggler and [install from disk](https://www.jetbrains.com/help/idea/installing-a-plugin-from-the-disk.html)
 
 ## How to use
